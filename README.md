@@ -21,6 +21,7 @@ Challenge is to build out this recipe page and get it looking as close to the de
   
 ### Screenshot
 - Desktop & Mobile
+  
   ![Screenshot 2024-02-05 164335](https://github.com/aratidsa/Recipe-Page-FrontEnd-Mentor-Challenge/assets/128802362/9b18b5c8-22f4-4fc9-9914-b443153050e8)
 
 ### Links

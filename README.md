@@ -27,7 +27,7 @@ Challenge is to build out this recipe page and get it looking as close to the de
 ### Links
 
 - Solution URL: https://github.com/aratidsa/Recipe-Page-FrontEnd-Mentor-Challenge/tree/main
-- Live Site URL: https://recipe-design.netlify.app/
+- Live Site URL: [https://recipe-design.netlify.app/](https://recipe-page-design.netlify.app/)
 
 ## My process
 

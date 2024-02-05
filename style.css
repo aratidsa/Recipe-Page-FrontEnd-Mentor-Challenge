@@ -1,0 +1,524 @@
+/* ------ RESET ------ */
+
+html,body
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+
+img
+{
+    max-width:100%;
+    display:block;
+}
+
+input,button
+{
+    font:inherit;
+}
+
+/* ------ CUSTOM PROPERTIES ------- */
+:root{
+
+    /* ---- FONT FAMILY ------ */
+    --ff-young-serif:'Young Serif', serif;
+    --ff-outfit:'Outfit', sans-serif;
+
+    
+    /* ---- FONT WEIGHT ------ */
+    --fw-400:400;
+    --fw-600:600;
+    --fw-700:700;
+
+    /* ---- COLOURS ------ */
+    --clr-nutmeg:hsl(14, 45%, 36%);
+    --clr-dark-raspberry:hsl(332, 51%, 32%);
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-rose-white:hsl(330, 100%, 98%);
+    --clr-eggshell:hsl(30, 54%, 90%);
+    --clr-light-grey:hsl(30, 18%, 87%);
+    --clr-wenge-brown:hsl(30, 10%, 34%);
+    --clr-dark-charcoal:hsl(24, 5%, 18%);
+
+     /* ---- FONT SIZE ------ */
+     --fs--16: 1rem;
+}
+
+/* -------------- TYPOGRAPHY --------------- */
+
+/* typography - uppercase */
+.upper-case{ text-transform:uppercase;}
+
+/* typography - letter spacing */
+.letter-spacing { letter-spacing: 0.10rem; }
+
+/* typography - font-family */
+.font-outfit { font-family:var(--ff-outfit); }
+.font-young-serif { font-family:var(--ff-young-serif); }
+
+/* typography - color */
+.clr-nutmeg { color:var(--clr-nutmeg);}
+
+/* typography - font-weight */
+.fw-600 { font-weight: var(--fw-600);}
+
+/* -------------- BODY --------------- */
+body
+{
+    font-family: var(--ff-young-serif);
+    font-size: var(--fs--16);
+    background-color: var(--clr-rose-white);
+    color:var(--clr-dark-charcoal);
+    line-height: 1.5;
+    font-weight: var(--fw-400);
+   }
+
+/* -------------- COMPONENTS --------------- */
+
+.container
+{
+    width:40.63rem;
+    min-height:100vh;
+    background-color: var(--clr-white);
+    margin:auto;
+    margin-top:6.25rem;
+    border-radius:1.25rem;
+    padding:2.5rem 2.5rem 1.88rem 2.5rem;    
+}
+
+/* ----- Image ----- */
+.image-omelette
+{
+    border-radius:0.63rem;
+    margin-top:0.5rem;
+}
+
+/* ------ h1 ------ */
+h1
+{
+    margin-top:2.5rem;
+    margin-bottom:-0.31rem;
+} 
+
+/* ---- Main Content ----- */
+.content
+{
+    font-family: var(--ff-outfit);
+    color:var(--clr-wenge-brown);    
+    font-weight: var(--fw-400);
+}
+
+/* ----- Preparation ----- */
+.prep
+{
+    background-color: var(--clr-rose-white);    
+    border-radius: 0.63rem;
+    margin-top:1.88rem;
+    padding:0px 0px 0.63rem 0px;
+}
+
+.prep h3
+{
+    padding:1.25rem 1.88rem;
+    font-size:1.25rem;
+}
+
+.prep ul 
+{
+    margin-top:-1.88rem;
+    padding:0px 3.75rem;
+}
+
+.prep ul li
+{
+    margin-bottom: 0.31rem;
+    list-style-type: none;
+    position: relative;
+}
+.prep ul li::before
+{
+    content: "▪";
+    color:var(--clr-nutmeg);   
+    font-size: 1.25rem;
+    margin-right:1.56rem;
+    margin-left:-1.25rem;
+    vertical-align: middle;
+}
+h3
+{
+    color:var(--clr-dark-raspberry);
+}
+
+/* ----- Ingredients ------  */
+.ingredients
+{
+    margin-top:1.88rem;
+    margin-bottom:1.88rem;
+}
+
+.ingredients h2
+{
+    margin-bottom: -0.31rem;
+}
+
+.ingredients ul li
+{
+    margin-bottom: 0.31rem;
+    list-style-type: none;
+    position: relative;
+}
+.ingredients ul li::before
+{
+    content: "▪";
+    color:var(--clr-nutmeg);   
+    font-size: 1.25rem;
+    margin-right:1.56rem;
+    margin-left:-2.19rem;
+    vertical-align: middle;
+}
+
+/* -------- Horizontal Line ----- */
+hr
+{
+    border: none;
+    height:1px;
+    background-color: var(--clr-light-grey);
+    margin:1.25rem 0px;
+}
+
+/* --- Instructions ---- */
+.instrucions
+{
+    margin-top:1.88rem;
+    margin-bottom:1.88rem;
+}
+
+.instrucions h2
+{
+    margin-bottom: -0.31rem;
+}
+
+.instrucions ol 
+{
+    list-style-type: none;
+    counter-reset: my-counter; /* Reset the counter for custom numbering */
+}
+
+.instrucions ol li
+{
+    margin-bottom: 0.31rem;
+    position: relative;
+    counter-increment: my-counter; /* Increment the counter for each list item */
+}
+.instrucions ol li::before
+{
+    content: counter(my-counter) "."; /* Use the counter value as content */
+    color:var(--clr-nutmeg);   
+    font-size: 1.06rem;
+    margin-right:1.06rem;
+    margin-left:-2.19rem;
+    vertical-align: middle;
+    font-weight: bold; 
+}
+
+/* ----- Nutrition ------------ */
+.nutrition
+{
+    margin-top:1.56rem;
+}
+
+.nutrition h2
+{
+    margin-bottom: -0.31rem;
+}
+
+.details
+{
+    margin-top:1.88rem;
+}
+
+.calories
+{
+    margin-top: 1.88rem;
+    margin-bottom:-0.5rem;
+}
+
+.carbs
+{
+    margin-top:-0.5rem;
+    margin-bottom:-0.5rem;
+}
+.protein
+{
+    margin-top:-0.5rem;
+    margin-bottom:-0.5rem;
+}
+.fat
+{
+    margin-top:-0.5rem;
+    /* margin-bottom:1.25rem; */
+}
+.nutri-dist
+{
+    margin-left:15.19rem;
+}
+.nutri-dist1
+{
+    margin-left:16.25rem;
+}
+.nutri-dist2
+{
+    margin-left:15.63rem;
+}
+.nutri-dist3
+{
+    margin-left:17.38rem;
+}
+
+.nutrients-dist
+{
+    margin-left:1.88rem;
+}
+
+/* ----- Footer ----- */
+.attribution
+{
+    font-size: 0.69rem;
+    text-align: center;
+    margin-top:0.63rem;
+}
+
+.attribution a {
+    color: rgb(255, 187, 0);
+}
+
+/* ------ Mobile Screen ------ */
+  
+@media only screen and (max-width: 375px), (max-device-width: 375px)
+{
+ /* -------------- COMPONENTS --------------- */
+
+ .container {
+    width:23.44rem;
+    margin-top:0px;
+    border-radius: 0px;
+    padding: 0px 0px 1.25rem 0px;   
+}
+/* ----- Image ----- */
+.image-omelette
+{
+    border-radius:0px;
+    margin-top:0px;
+    width:23.44rem;
+}
+/* ------ h1 ------ */
+h1
+{
+    margin-top:2.5rem;
+    margin-bottom:1.88rem;
+    padding:0px 1.88rem;
+    font-size:2.25rem;
+    line-height: 1;
+} 
+
+/* ---- Main Content ----- */
+.content
+{
+   padding:0px 1.88rem;
+}
+
+/* ----- Preparation ----- */
+.prep
+{
+    background-color: var(--clr-rose-white);    
+    border-radius: 0.63rem;
+    margin-top:1.88rem;
+    padding:0px 0px 0.63rem 0px;
+}
+
+.prep h3
+{
+    padding:1.25rem 1.88rem;
+    font-size:1.25rem;
+}
+
+.prep ul 
+{
+    margin-top:-1.88rem;
+    padding:0px 3.75rem;    
+}
+
+.prep ul li
+{
+    margin-bottom: 0.31rem;
+    list-style-type: none;
+    position: relative;
+    text-align: left;
+}
+
+.min
+{
+    margin-left:0.63rem;
+    margin-top:-1.25rem;
+}
+
+.prep ul li::before
+{
+    content: "▪";
+    color:var(--clr-wenge-brown);   
+    font-size: 1.25rem;
+    margin-right:1.44rem !important;
+    margin-left:-1.25rem;
+    vertical-align: middle;    
+}
+h3
+{
+    color:var(--clr-dark-raspberry);
+}
+
+/* ----- Ingredients ------  */
+.ingredients
+{
+    margin-top:1.88rem;
+    margin-bottom:1.88rem;
+}
+
+.ingredients h2
+{
+    margin-bottom: -0.31rem;
+    font-size: 1.75rem;
+}
+
+.ingredients ul li
+{
+    margin-bottom: 0.31rem;
+    list-style-type: none;
+    position: relative;
+}
+.ingredients ul li::before
+{
+    content: "▪";
+    color:var(--clr-nutmeg);   
+    font-size: 1.25rem;
+    margin-right:1.56rem;
+    margin-left:-2.19rem;
+    vertical-align: middle;
+}
+
+/* -------- Horizontal Line ----- */
+hr
+{
+    border: none;
+    height:1px;
+    background-color: var(--clr-light-grey);
+    margin:1.25rem 0px;
+}
+
+/* --- Instructions ---- */
+.instrucions
+{
+    margin-top:1.88rem;
+    margin-bottom:1.88rem;
+    padding:0px 0.31rem 0px 0px;
+}
+
+.instrucions h2
+{
+    margin-bottom: -0.31rem;
+    font-size: 1.75rem;
+}
+
+.instrucions ol 
+{
+    list-style-type: none;
+    counter-reset: my-counter; /* Reset the counter for custom numbering */
+}
+
+.instrucions ol li
+{
+    margin-bottom: 0.31rem;
+    position: relative;
+    counter-increment: my-counter; /* Increment the counter for each list item */  
+}
+.instrucions ol li::before
+{
+    content: counter(my-counter) "."; /* Use the counter value as content */
+    color:var(--clr-nutmeg);   
+    font-size: 1rem;
+    margin-right:1.38rem;
+    margin-left:-2.19rem;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+/* ----- Nutrition ------------ */
+.nutrition
+{
+    margin-top:1.56rem;
+    padding:0px 0.31rem 0px 0px;
+}
+
+.nutrition h2
+{
+    margin-bottom: -0.31rem;
+    font-size:1.88rem;
+}
+
+.details
+{
+    margin-top:1.88rem;
+}
+
+.calories
+{
+    margin-top: 1.88rem;
+    margin-bottom:-0.5rem;
+}
+
+.carbs
+{
+    margin-top:-0.5rem;
+    margin-bottom:-0.5rem;
+}
+.protein
+{
+    margin-top:-0.5rem;
+    margin-bottom:-0.5rem;
+}
+.fat
+{
+    margin-top:-0.5rem;
+}
+.nutri-dist
+{
+    margin-left:4.69rem;
+}
+.nutri-dist1
+{
+    margin-left:5.63rem;
+}
+.nutri-dist2
+{
+    margin-left:5.19rem;
+}
+.nutri-dist3
+{
+    margin-left:6.88rem;
+}
+
+.nutrients-dist
+{
+    margin-left:1.88rem;
+}
+
+/* ----- Footer ----- */
+.attribution
+{
+    display: none;
+}
+
+.attribution a {
+    color: rgb(255, 187, 0);
+}
+}
